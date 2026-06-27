@@ -1,0 +1,11 @@
+.app {
+  min-height: 100vh;
+  background: var(--surface-page);
+  position: relative;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}

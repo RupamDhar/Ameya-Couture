@@ -1,0 +1,90 @@
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-espresso);
+  line-height: 1;
+}
+
+.logo__lotus {
+  width: 56px;
+  height: auto;
+}
+
+.logo__wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo__name {
+  font-family: var(--font-serif-display);
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  color: var(--color-marigold-dark);
+  font-size: 22px;
+  padding-left: 0.28em;
+}
+
+.logo__rule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-marigold-dark);
+}
+
+.logo__rule-line {
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.7;
+}
+
+.logo__rule-text {
+  font-family: var(--font-serif-display);
+  letter-spacing: 0.36em;
+  font-size: 9.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Sizes */
+.logo--sm .logo__lotus { width: 38px; }
+.logo--sm .logo__name { font-size: 16px; }
+.logo--sm .logo__rule-text { font-size: 8px; }
+.logo--sm .logo__rule-line { width: 18px; }
+
+.logo--md .logo__lotus { width: 56px; }
+.logo--md .logo__name { font-size: 22px; }
+
+.logo--lg .logo__lotus { width: 96px; }
+.logo--lg .logo__name { font-size: 44px; }
+.logo--lg .logo__rule-text { font-size: 12px; letter-spacing: 0.42em; }
+.logo--lg .logo__rule-line { width: 38px; }
+
+.logo--xl .logo__lotus { width: 130px; }
+.logo--xl .logo__name { font-size: 64px; letter-spacing: 0.22em; }
+.logo--xl .logo__rule-text { font-size: 14px; letter-spacing: 0.44em; }
+.logo--xl .logo__rule-line { width: 54px; }
+
+/* Mark only (no text) */
+.logo--mark {
+  gap: 0;
+}
+
+/* Inline horizontal variant */
+.logo--inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo--inline .logo__lotus { width: 38px; }
+.logo--inline .logo__wordmark { align-items: flex-start; }
+
+@media (max-width: 720px) {
+  .logo--xl .logo__name { font-size: 44px; }
+  .logo--xl .logo__lotus { width: 96px; }
+}

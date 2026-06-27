@@ -1,0 +1,201 @@
+.testimonials {
+  padding: 140px 0;
+  background:
+    radial-gradient(900px 600px at 0% 100%, rgba(217, 164, 65, 0.13), transparent 70%),
+    radial-gradient(900px 600px at 100% 0%, rgba(232, 180, 188, 0.18), transparent 70%),
+    linear-gradient(180deg, #F4E2C8 0%, #FBF6EE 100%);
+  position: relative;
+}
+
+.testimonials__header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.testimonials__header .eyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.testimonials__title {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.testimonials__rating {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.testimonials__rating-num {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  color: var(--color-marigold-gold);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.testimonials__rating-stars {
+  color: var(--color-marigold-gold);
+  letter-spacing: 4px;
+  font-size: 1.4rem;
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.tm-card {
+  position: relative;
+  background: var(--surface-card);
+  border-radius: var(--r-lg);
+  padding: 36px 32px 32px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--line-soft);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-soft);
+  overflow: hidden;
+}
+
+.tm-card::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 4px;
+  background: var(--color-festive-maroon);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.tm-card--rose::before { background: var(--color-rose-mauve); }
+.tm-card--gold::before { background: var(--color-marigold-gold); }
+.tm-card--maroon::before { background: var(--color-festive-maroon); }
+
+.tm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.tm-card:hover::before {
+  transform: scaleX(1);
+}
+
+.tm-card__quote {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 64px;
+  height: 64px;
+  color: var(--color-festive-maroon);
+  opacity: 0.85;
+}
+
+.tm-card--gold .tm-card__quote { color: var(--color-marigold-gold); }
+.tm-card--maroon .tm-card__quote { color: var(--color-festive-maroon); }
+
+.tm-card__quote svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tm-card__stars {
+  color: var(--color-marigold-gold);
+  letter-spacing: 3px;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.tm-card__body {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--color-espresso);
+  font-style: italic;
+  font-weight: 500;
+  margin: 0 0 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.tm-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid var(--line-soft);
+  padding-top: 20px;
+}
+
+.tm-card__avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(251, 246, 238, 0.95), rgba(232, 180, 188, 0.4) 70%, rgba(217, 164, 65, 0.3) 100%);
+  color: var(--color-festive-maroon);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: 1.5px solid var(--color-marigold-gold);
+  flex-shrink: 0;
+  box-shadow: 0 6px 14px -8px rgba(142, 43, 46, 0.3);
+}
+
+.tm-card--gold .tm-card__avatar {
+  background: rgba(217, 164, 65, 0.16);
+  color: var(--color-marigold-dark);
+}
+.tm-card--maroon .tm-card__avatar {
+  background: rgba(142, 43, 46, 0.12);
+  color: var(--color-festive-maroon);
+}
+
+.tm-card__name {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--color-espresso);
+  font-weight: 500;
+}
+
+.tm-card__role {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.testimonials__source {
+  text-align: center;
+  margin-top: 56px;
+}
+
+.testimonials__source p {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+
+@media (max-width: 980px) {
+  .testimonials { padding: 90px 0; }
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
