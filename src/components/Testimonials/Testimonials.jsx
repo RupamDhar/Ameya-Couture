@@ -35,7 +35,7 @@ function Testimonials() {
               <span className="testimonials__rating-num">5.0</span>
               <span className="testimonials__rating-stars" aria-label="5 out of 5 stars">★★★★★</span>
             </span>
-            <span>What our muses are <em>saying.</em></span>
+            <span>What our clients are <em>saying.</em></span>
           </h2>
         </header>
 
